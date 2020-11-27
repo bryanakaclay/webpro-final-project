@@ -1,6 +1,6 @@
 import React from 'react'
 
-function local() {
+const local = () =>{
     return (
         <div>
             <h1>Local</h1>
@@ -8,4 +8,4 @@ function local() {
     )
 }
 
-export default local
+export default local;

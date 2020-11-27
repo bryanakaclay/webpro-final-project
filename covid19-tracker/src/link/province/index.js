@@ -1,6 +1,6 @@
 import React from 'react'
 
-function province() {
+const province = () =>{
     return (
         <div>
             <h1>Province</h1>
@@ -8,4 +8,4 @@ function province() {
     )
 }
 
-export default province
+export default province;

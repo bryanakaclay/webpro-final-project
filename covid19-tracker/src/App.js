@@ -1,46 +1,21 @@
-import React from 'react'
-import './App.css'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import { international, local, province } from './link'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+import {international, local, province} from './link'
 
 const App = () =>{
-  return (
-    <Router>
-      <div>
-        <h1>Covid-19 Tracker</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/international">
-                International
-              </Link>
-            </li>
-            <li>
-              <Link to="/local">
-                Local
-              </Link>
-            </li>
-            <li>
-              <Link to="/province">
-                Province
-              </Link>
-            </li>
-          </ul>
-      </nav>
-    </div>
-    <Switch>
-      <Route path="/international">
-        <international />
-      </Route>
-      <Route path="/local">
-        <local />
-      </Route>
-      <Route path="/province">
-        <province />
-      </Route>
-    </Switch>
-  </Router>
-  )
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        axios
+            .get("https://covid19.mathdro.id/api")
+            .then((response) => setUsers(response.data))
+    }, [])
+    console.log(users)
+    return(
+        <div>
+            <h1>International</h1>
+        </div>
+    )
 }
 
 export default App;
