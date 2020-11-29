@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import list from 
+import {international, local, province} from './link'
 
-const international = () =>{
+const App = () =>{
     const [users, setUsers] = useState([])
 
     useEffect(() => {
@@ -10,22 +10,12 @@ const international = () =>{
             .get("https://covid19.mathdro.id/api")
             .then((response) => setUsers(response.data))
     }, [])
-    return (
+    console.log(users)
+    return(
         <div>
             <h1>International</h1>
-            <>
-                {
-                    users.map((item) =>{
-                        return(
-                            <Card
-
-                            />
-                        )
-                    })
-                }
-            </>
         </div>
     )
 }
 
-export default international;
+export default App;

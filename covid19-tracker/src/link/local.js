@@ -1,11 +1,11 @@
 import React from 'react'
 
-const province = () =>{
+const local = () =>{
     return (
         <div>
-            <h1>Province</h1>
+            <h1>Local Case</h1>
         </div>
     )
 }
 
-export default province;
+export default local;
