@@ -1,4 +1,4 @@
 import header from './header'
-import list from './list'
+import card from './card'
 
-export default {header, list}
+export default { header, card }
