@@ -18,11 +18,11 @@ const App = () =>{
 
 
   return(
-    <>
+    <div className="card-style">
     {confirmed}
     {recovered}
     {death}
-    </>
+    </div>
   )
 }
 
