@@ -1,28 +1,45 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
+import React from 'react'
 import './App.css'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import {International, Local, Province} from './Components' 
 
 const App = () =>{
-  const [confirmed, setConfirmed] = useState([])
-  const [recovered, setRecovered] = useState([])
-  const [death, setDeaths] = useState([])
-  useEffect(() =>{
-    axios
-    .get("https://covid19.mathdro.id/api")
-    .then((response) => {
-      setConfirmed (response.data.confirmed.value)
-      setRecovered (response.data.recovered.value)
-      setDeaths (response.data.deaths.value)
-    })
-  }, [])
-
-
   return(
-    <div className="card-style">
-    {confirmed}
-    {recovered}
-    {death}
-    </div>
+    <Router>
+      <div>
+        <h1>COVID-19 Tracker</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/International">
+                International
+              </Link>
+            </li>
+            <li>
+              <Link to="/Local">
+                Local
+              </Link>
+            </li>
+            <li>
+              <Link to="/Province">
+                Province
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <Switch>
+        <Route path="/International">
+          <International />
+        </Route>
+        <Route path="/Local">
+          <Local />
+        </Route>
+        <Route path="/Province">
+          <Province />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
