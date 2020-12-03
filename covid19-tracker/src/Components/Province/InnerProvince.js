@@ -14,24 +14,24 @@ export default function InnerProvince (){
     console.log(provinceData)
     return(
         <div>
-            <table border="1">
+            <table border="1" className="table-container">
                 <tr>
-                    <th>No</th>
-                    <th>Province</th>
-                    <th>Confirmed</th>
-                    <th>Recovered</th>
-                    <th>Death</th>
+                    <th className="table-value-first">No</th>
+                    <th className="table-value-second">Province</th>
+                    <th className="table-value-third">Confirmed</th>
+                    <th className="table-value-fourth">Recovered</th>
+                    <th className="table-value-fifth">Death</th>
                 </tr>
                 {provinceData.map((item, index) => {
                     return(
                         <tr>
-                            <th scope="row" key={item.fid}>{index + 1}</th>
-                            <th>{item.provinsi}</th>
-                            <th><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
-                            <th><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
-                            <th><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-value-first"scope="row" key={item.fid}>{index + 1}</th>
+                            <th className="table-value-second">{item.provinsi}</th>
+                            <th className="table-value-third"><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-value-fourth"><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
+                            <th className="table-value-fifth"><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
                         </tr>
-                   )
+                    )
                 })}
             </table>
         </div>    

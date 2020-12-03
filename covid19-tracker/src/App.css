@@ -18,52 +18,66 @@
 .table-container{
   margin: 5px;
 }
+.table-value-first{
+  background-color: wheat;
+  padding: 5px;
+}
+.table-value-second{
+  background-color: turquoise;
+  padding: 5px;
+}
+.table-value-third{
+  background-color: yellow;
+  padding: 5px;
+}
+.table-value-fourth{
+  background-color: rgb(0, 255, 0);
+  padding: 5px;
+}
+.table-value-fifth{
+  background-color: red;
+  padding: 5px;
+}
 .main-container{
   margin: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 .header{
-  font-family: 'Texturina', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, serif;
+  
 }
 .card_confirmed{
-  font-size: 25px;
-  width: 250px;
+  width: 200px;
   height: 150px;
+  padding-bottom: 33px;
   text-align: center;
-  margin: 2px;
-  padding: 40px;
-  border: black;
   border-radius: 25px;
-  border-width: 20px;
-  border-color: black;
+  border-width: 7px;
+  border-color: yellowgreen;
+  border-style: solid;
   font-weight: bold;
-  background-color: yellow;
+  font-size: 25px;
 }
 .card_recovered{
-  font-size: 25px;
-  width: 250px;
+  width: 200px;
   height: 150px;
+  padding-bottom: 33px;
   text-align: center;
-  margin: 2px;
-  padding: 40px;
-  border: black;
   border-radius: 25px;
-  border-width: 20px;
-  border-color: black;
+  border-width: 7px;
+  border-color: green;
+  border-style: solid;
   font-weight: bold;
-  background-color: greenyellow;
+  font-size: 25px;
 }
 .card_death{
-  font-size: 25px;
-  width: 250px;
+  width: 200px;
   height: 150px;
+  padding-bottom: 33px;
   text-align: center;
-  margin: 2px;
-  padding: 40px;
-  border: black;
   border-radius: 25px;
-  border-width: 20px;
-  border-color: black;
+  border-width: 7px;
+  border-color: red;
+  border-style: solid;
   font-weight: bold;
-  background-color: red;
+  font-size: 25px;
 }
