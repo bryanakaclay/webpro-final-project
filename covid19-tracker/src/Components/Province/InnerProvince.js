@@ -1,64 +1,27 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import NumberFormat from "react-number-format";
+import '../../App.css'
 
 export default function InnerProvince (){
-    const [prov, setProvince] = useState([])
-    const [namaprov, setNameProvince] = useState([])
-    const [confirmed, setConfirmed] = useState([])
-    const [recovered, setRecovered] = useState([])
-    const [death, setDeaths] = useState([])
-    useEffect(() =>{
+    const [provinceData, getProvince] = useState([]);
+    useEffect(() => {
         axios
-        .get("https://indonesia-covid-19.mathdro.id//provinsi")
-        .then((response) => {
-            setProvince (response.data.fid)
-            setNameProvince (response.data.provinsi)
-            setConfirmed (response.data.kasusPosi)
-            setRecovered (response.data.kasusSemb)
-            setDeaths (response.data.kasusMeni)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }, [])
-
+            .get("https://indonesia-covid-19.mathdro.id/api/provinsi")
+            .then(response => {getProvince(response.data.data)})
+            .catch(err => {console.log(err)})
+    }, []);
+    console.log(provinceData)
     return(
-        <>
-            <table border="1">
-                <tr>
-                    <th>
-                        Provinsi
-                    </th>
-                    <th>
-                        Positif
-                    </th>
-                    <th>
-                        Sembuh
-                    </th>
-                    <th>
-                        Meninggal
-                    </th>
+        <div>
+            {provinceData?.map((item, index) => {
+                <tr key={index}>
+                    <th scope="row" key={item.fid}>{index + 1}</th>
+                    <td>{item.provinsi}</td>
+                    <td>{item.kasusPosi}</td>
+                    <td>{item.kasusSemb}</td>
+                    <td>{item.kasusMeni}</td>
                 </tr>
-                {prov.map((item) =>{
-                    return(
-                        <tr>
-                            <th>
-                                {namaprov}
-                            </th>
-                            <th>
-                                {<NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>}
-                            </th>
-                            <th>
-                                <NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/>
-                            </th>
-                            <th>
-                                <NumberFormat value={death} thousandSeparator={true} displayType={'text'}/>
-                            </th>
-                        </tr>
-                    )
-                })}
-            </table>
-        </>    
+            })}
+        </div>    
     )
 }

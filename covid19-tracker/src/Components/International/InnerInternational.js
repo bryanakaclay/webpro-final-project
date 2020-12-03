@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import NumberFormat from "react-number-format"
-import Card from 'react-native-elements'
+import '../../App.css'
 
 export default function InnerInternational (){
     const [confirmed, setConfirmed] = useState("")
@@ -15,40 +15,47 @@ export default function InnerInternational (){
             setRecovered (response.data.recovered.value)
             setDeaths (response.data.deaths.value)
         })
-        .catch(err => {
-            console.log(err)
-        })
+        .catch(err => {console.log(err)})
     }, [])
 
     return(
-        <>
-        <Card>
-            <Card.Title>Confirmed</Card.Title>
-        </Card>
-            <ul>
-                <li>
-                    <h2>Confirmed</h2>
-                </li>
-                <li>
-                    <NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h2>Recovered</h2>
-                </li>
-                <li>
-                    <NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/>
-                </li>
-            </ul>  
-            <ul>
-                <li>
-                    <h2>Death</h2>
-                </li>
-                <li>
-                    <NumberFormat value={death} thousandSeparator={true} displayType={'text'}/>
-                </li>
-            </ul>
-        </>
+        <div className="table-container">
+            <table border="1">
+                <tr>
+                    <th>
+                        <div className="confirmed-container">
+                            Confirmed
+                        </div>
+                    </th>
+                    <th>
+                        <div className="recovered-container">
+                            Recovered
+                        </div>
+                    </th>
+                    <th>
+                        <div className="death-container">
+                            Death
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div className="confirmed-container">
+                            <NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>
+                        </div>
+                    </th>
+                    <th>
+                        <div className="recovered-container">
+                            <NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/>
+                        </div>
+                    </th>
+                    <th>
+                        <div className="death-container">
+                            <NumberFormat value={death} thousandSeparator={true} displayType={'text'}/>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
     )
 }

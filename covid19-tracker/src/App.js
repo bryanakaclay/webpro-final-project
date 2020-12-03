@@ -7,7 +7,10 @@ const App = () =>{
   return(
     <Router>
       <div>
+        <div className="header">
         <h1>COVID-19 Tracker</h1>
+        </div>
+        <h3>Badiam sadiki napa dirumah? ¯\_(ツ)_/¯</h3>
         <nav>
           <ul>
             <li>
