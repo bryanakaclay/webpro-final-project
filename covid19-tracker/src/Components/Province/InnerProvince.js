@@ -13,7 +13,7 @@ export default function InnerProvince (){
     }, []);
     console.log(provinceData)
     return(
-        <div>
+        <div align="center">
             <table border="1" className="table-container">
                 <tr>
                     <th className="table-value-first">No</th>

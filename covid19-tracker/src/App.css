@@ -1,49 +1,31 @@
-.confirmed-container{
-  margin-inline-start: 5px;
-  margin-inline-end: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-color: yellow;
+.header{
+  text-align: center;
 }
-.recovered-container{
-  margin-inline-start: 5px;
-  margin-inline-end: 5px;
-  background-color: greenyellow;
+.main-nav-container{
+  align-content: center;
 }
-.death-container{
-  margin-inline-start: 5px;
-  margin-inline-end: 5px;
-  background-color: red;
+.link-container{
+  margin-left: 15px;
 }
-.table-container{
-  margin: 5px;
+.link1{
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.table-value-first{
-  background-color: wheat;
-  padding: 5px;
+.link2{
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.table-value-second{
-  background-color: turquoise;
-  padding: 5px;
-}
-.table-value-third{
-  background-color: yellow;
-  padding: 5px;
-}
-.table-value-fourth{
-  background-color: rgb(0, 255, 0);
-  padding: 5px;
-}
-.table-value-fifth{
-  background-color: red;
-  padding: 5px;
+.link3{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .main-container{
+  text-align: center;
   margin: 20px;
   font-family: 'Open Sans', sans-serif;
 }
-.header{
-  
+.table-container{
+  margin: 25px;
 }
 .card_confirmed{
   width: 200px;
@@ -80,4 +62,46 @@
   border-style: solid;
   font-weight: bold;
   font-size: 25px;
+}
+.confirmed-container{
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: yellow;
+}
+.recovered-container{
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+  background-color: greenyellow;
+}
+.death-container{
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+  background-color: red;
+}
+.table-value-first{
+  background-color: wheat;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.table-value-second{
+  background-color: turquoise;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.table-value-third{
+  background-color: yellow;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.table-value-fourth{
+  background-color: rgb(0, 255, 0);
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.table-value-fifth{
+  background-color: red;
+  padding-left: 40px;
+  padding-right: 40px;
 }

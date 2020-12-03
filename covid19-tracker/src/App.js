@@ -8,29 +8,32 @@ const App = () =>{
     <Router>
       <div>
         <div className="header">
-        <h1>COVID-19 Tracker</h1>
+          <h1>COVID-19 Tracker</h1>
+          <p>"Badiam sadiki napa dirumah? ¯\_(ツ)_/¯" -Manado's Language</p>
         </div>
-        <h3>"Badiam sadiki napa dirumah? ¯\_(ツ)_/¯"</h3>
-        <h3>- Manado's Language</h3>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/International">
-                International
-              </Link>
-            </li>
-            <li>
-              <Link to="/Local">
-                Local
-              </Link>
-            </li>
-            <li>
-              <Link to="/Province">
-                Province
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="main-nav-container">
+          <nav align="center">
+            <table align="center">
+              <tr className="link1">
+                <th className="link1">
+                  <Link to="/International">
+                    International
+                  </Link>
+                </th>
+                <th className="link2">
+                  <Link to="/Local">
+                    Local
+                  </Link>
+                </th>
+                <th className="link3">
+                  <Link to="/Province">
+                    Province
+                  </Link>
+                </th>
+              </tr>
+            </table>
+          </nav>
+        </div>
       </div>
       <Switch>
         <Route path="/International">

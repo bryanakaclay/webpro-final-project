@@ -19,7 +19,7 @@ export default function InnerInternational (){
     }, [])
 
     return(
-        <>
+        <div align="center">
             <table className="table-container">
                 <tr>
                     <th className="card_confirmed">
@@ -36,6 +36,6 @@ export default function InnerInternational (){
                     </th>
                 </tr>
             </table>
-        </>
+        </div>
     )
 }

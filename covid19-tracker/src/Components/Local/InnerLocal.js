@@ -19,7 +19,7 @@ export default function InnerLocal (){
     }, [])
 
     return(
-        <div>
+        <div align="center">
             <table className="table-container">
                 <tr>
                     <th className="card_confirmed">
