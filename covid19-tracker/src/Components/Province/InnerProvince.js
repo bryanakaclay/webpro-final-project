@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../../App.css'
+import NumberFormat from "react-number-format"
 
 export default function InnerProvince (){
     const [provinceData, getProvince] = useState([]);
@@ -13,15 +14,26 @@ export default function InnerProvince (){
     console.log(provinceData)
     return(
         <div>
-            {provinceData?.map((item, index) => {
-                <tr key={index}>
-                    <th scope="row" key={item.fid}>{index + 1}</th>
-                    <td>{item.provinsi}</td>
-                    <td>{item.kasusPosi}</td>
-                    <td>{item.kasusSemb}</td>
-                    <td>{item.kasusMeni}</td>
+            <table border="1">
+                <tr>
+                    <th>No</th>
+                    <th>Province</th>
+                    <th>Confirmed</th>
+                    <th>Recovered</th>
+                    <th>Death</th>
                 </tr>
-            })}
+                {provinceData.map((item, index) => {
+                    return(
+                        <tr>
+                            <th scope="row" key={item.fid}>{index + 1}</th>
+                            <th>{item.provinsi}</th>
+                            <th><NumberFormat value={item.kasusPosi} thousandSeparator={true} displayType={'text'}/></th>
+                            <th><NumberFormat value={item.kasusSemb} thousandSeparator={true} displayType={'text'}/></th>
+                            <th><NumberFormat value={item.kasusMeni} thousandSeparator={true} displayType={'text'}/></th>
+                        </tr>
+                   )
+                })}
+            </table>
         </div>    
     )
 }

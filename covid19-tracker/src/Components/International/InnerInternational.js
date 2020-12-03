@@ -19,43 +19,44 @@ export default function InnerInternational (){
     }, [])
 
     return(
+        <>
         <div className="table-container">
             <table border="1">
                 <tr>
-                    <th>
-                        <div className="confirmed-container">
-                            Confirmed
-                        </div>
-                    </th>
-                    <th>
-                        <div className="recovered-container">
-                            Recovered
-                        </div>
-                    </th>
-                    <th>
-                        <div className="death-container">
-                            Death
-                        </div>
-                    </th>
+                    <th className="confirmed-container">Confirmed</th>
+                    <th className="recovered-container">Recovered</th>
+                    <th className="death-container">Death</th>
                 </tr>
                 <tr>
-                    <th>
-                        <div className="confirmed-container">
-                            <NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>
-                        </div>
-                    </th>
-                    <th>
-                        <div className="recovered-container">
-                            <NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/>
-                        </div>
-                    </th>
-                    <th>
-                        <div className="death-container">
-                            <NumberFormat value={death} thousandSeparator={true} displayType={'text'}/>
-                        </div>
-                    </th>
+                    <th className="confirmed-container"><NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/></th>
+                    <th className="recovered-container"><NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/></th>
+                    <th className="death-container"><NumberFormat value={death} thousandSeparator={true} displayType={'text'}/></th>
                 </tr>
             </table>
         </div>
+    </>
     )
 }
+
+//          <table border="1">
+//             <tr>
+//                 <th>
+//                     <h1 className="card_confirmed">
+//                         <p>Confirmed</p>
+//                         <NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>
+//                     </h1>
+//                 </th>
+//                 <th>
+//                     <h1 className="card_recovered">
+//                         <p>Recovered</p>
+//                         <NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/>
+//                     </h1>
+//                 </th>
+//                 <th>
+//                     <h1 className="card_death">
+//                         <p>Death</p>
+//                         <NumberFormat value={death} thousandSeparator={true} displayType={'text'}/>
+//                     </h1>
+//                 </th>
+//             </tr>
+//         </table>

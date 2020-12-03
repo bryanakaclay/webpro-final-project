@@ -22,38 +22,14 @@ export default function InnerLocal () {
         <div className="table-container">
             <table border="1">
                 <tr>
-                    <th>
-                        <div className="confirmed-container">
-                            Positif
-                        </div>
-                    </th>
-                    <th>
-                        <div className="recovered-container">
-                            Sembuh
-                        </div>
-                    </th>
-                    <th>
-                        <div className="death-container">
-                            Meninggoy
-                        </div>
-                    </th>
+                    <th className="confirmed-container">Confirmed</th>
+                    <th className="recovered-container">Recovered</th>
+                    <th className="death-container">Death</th>
                 </tr>
                 <tr>
-                    <th>
-                        <div className="confirmed-container">
-                            <NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>
-                        </div>
-                    </th>
-                    <th>
-                        <div className="recovered-container">
-                            <NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/>
-                        </div>
-                    </th>
-                    <th>
-                        <div className="death-container">
-                            <NumberFormat value={death} thousandSeparator={true} displayType={'text'}/>
-                        </div>
-                    </th>
+                    <th className="confirmed-container"><NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/></th>
+                    <th className="recovered-container"><NumberFormat value={recovered} thousandSeparator={true} displayType={'text'}/></th>
+                    <th className="death-container"><NumberFormat value={death} thousandSeparator={true} displayType={'text'}/></th>
                 </tr>
             </table>
         </div>    
