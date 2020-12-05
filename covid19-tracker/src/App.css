@@ -1,11 +1,8 @@
 .main{
-  
-}
-.header{
   text-align: center;
 }
-.main-nav-container{
-  align-content: center;
+.header{
+  font-weight: bold;
 }
 .link-container{
   margin-left: 15px;
@@ -23,12 +20,16 @@
   padding-right: 10px;
 }
 .main-container{
-  text-align: center;
   margin: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 .table-container{
+  align-content: center;
   margin: 25px;
+}
+.card-pad{
+  padding: 20px;
+  margin: 20px;
 }
 .card_confirmed{
   width: 200px;
@@ -108,3 +109,33 @@
   padding-left: 40px;
   padding-right: 40px;
 }
+/* .card_confirmed{
+  width: 200px;
+  height: 150px;
+  padding-bottom: 33px;
+  background-color: yellow;
+  border-width: 100px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.card_recovered{
+  width: 200px;
+  height: 150px;
+  padding-bottom: 33px;
+  background-color: greenyellow;
+  border-width: 100px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.card_death{
+  width: 200px;
+  height: 150px;
+  padding-bottom: 33px;
+  background-color: red;
+  border-width: 100px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 25px;
+} */

@@ -21,7 +21,7 @@ export default function InnerInternational (){
     return(
         <div align="center">
             <table className="table-container">
-                <tr>
+                <tr className="padding">
                     <th className="card_confirmed">
                         <p>Confirmed</p>
                         <NumberFormat value={confirmed} thousandSeparator={true} displayType={'text'}/>
