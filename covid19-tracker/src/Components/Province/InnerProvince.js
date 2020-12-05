@@ -13,9 +13,9 @@ export default function InnerProvince (){
     }, []);
     console.log(provinceData)
     return(
-        <div>
+        <div align="center">
             <table border="1" className="table-container">
-                <tr className="card-pad">
+                <tr>
                     <th className="table-value-first">No</th>
                     <th className="table-value-second">Province</th>
                     <th className="table-value-third">Confirmed</th>
