@@ -1,18 +1,14 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import {International, Local, Province} from './Components'
+import {Header, International, Local, Province} from './Components'
 
 const App = () =>{
   return(
     <div className="main">
     <Router>
       <div>
-        <div className="header">
-          <h1>COVID-19 Tracker</h1>
-          <p>"Badiam sadiki napa dirumah? ¯\_(ツ)_/¯" -Manado's Language</p>
-          <p>Please click at link below to see COVID-19 data case.</p>
-        </div>
+        <Header />
         <div className="main-nav-container">
           <nav align="center">
             <table align="center">
