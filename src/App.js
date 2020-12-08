@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import {International, Local, Province} from './Components' 
+import {International, Local, Province} from './Components'
 
 const App = () =>{
   return(
